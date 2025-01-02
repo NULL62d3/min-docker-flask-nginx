@@ -10,13 +10,13 @@ services:
     ports:
       - '8080:80'
     depends_on:
-      - app
+      - appcore
     networks:
       - nginx_network
   
-  app:
-    build: ./app
-    container_name: app
+  appcore:
+    build: ./appcore
+    container_name: appcore
     ports:
       - 3001:3000
     expose:

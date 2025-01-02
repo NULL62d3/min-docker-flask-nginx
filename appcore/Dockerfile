@@ -1,10 +1,10 @@
 FROM python:3.13-slim
 
-WORKDIR /app
+WORKDIR /appcore
 
-ADD . /app
+ADD . /appcore
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-CMD ["python", "src/app.py"]
+CMD ["python", "src/AppCore.py"]
