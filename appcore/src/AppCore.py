@@ -1,6 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from flask import Flask
 
 app = Flask(__name__)
+
+@app.route('/', methods=['GET'])
+def index():
+    return "index"
+
 
 @app.route('/AppCore/sayHello', methods=['GET'])
 def sayHello():
@@ -10,6 +18,4 @@ def sayHello():
 def sayName(name):
     return f"sayName: Hello! {name}"
 
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=3000)
 

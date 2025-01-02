@@ -1,6 +1,6 @@
 import requests
 
-url = 'http://localhost:3001/AppCore'
+url = 'http://localhost:8080/AppCore'
 
 def sayHello():
     return requests.get(f"{url}/sayHello").text
