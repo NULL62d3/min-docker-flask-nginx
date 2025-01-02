@@ -28,5 +28,9 @@ docker run hello-world
 docker compose up
 ```
 
-## Preview on your browser
+## Preview index.html on your browser
 Open: http://localhost:8080
+
+## Check flask api return
+Open http://localhost:3001 to execute index.
+Open http://localhost:3001/name to execute hello(name)
