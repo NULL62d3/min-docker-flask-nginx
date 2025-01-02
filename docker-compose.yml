@@ -9,3 +9,22 @@ services:
       - ./public:/etc/nginx/html
     ports:
       - '8080:80'
+    depends_on:
+      - appcore
+    networks:
+      - nginx_network
+  
+  appcore:
+    build: ./AppCore
+    container_name: appcore
+    ports:
+      - 3001:3000
+    expose:
+      - '3000'
+    tty: true
+    networks:
+      - nginx_network
+  
+networks:
+  nginx_network:
+    driver: bridge
