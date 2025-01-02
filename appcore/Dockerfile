@@ -1,8 +1,8 @@
 FROM python:3.13-slim
 
-WORKDIR /appcore
+WORKDIR /AppCore
 
-ADD . /appcore
+ADD . /AppCore
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
